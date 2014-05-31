@@ -1,5 +1,5 @@
 //
-// JODConverter Document Formats Configuration
+// Docwaza Document Formats Configuration
 //
 [
   {

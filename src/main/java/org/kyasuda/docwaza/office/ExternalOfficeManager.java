@@ -1,20 +1,20 @@
 //
-// JODConverter - Java OpenDocument Converter
+// Docwaza - Java OpenDocument Converter
 // Copyright 2009 Art of Solving Ltd
 // Copyright 2004-2009 Mirko Nasato
 //
-// JODConverter is free software: you can redistribute it and/or
+// Docwaza is free software: you can redistribute it and/or
 // modify it under the terms of the GNU Lesser General Public License
 // as published by the Free Software Foundation, either version 3 of
 // the License, or (at your option) any later version.
 //
-// JODConverter is distributed in the hope that it will be useful,
+// Docwaza is distributed in the hope that it will be useful,
 // but WITHOUT ANY WARRANTY; without even the implied warranty of
 // MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
 // Lesser General Public License for more details.
 //
 // You should have received a copy of the GNU Lesser General
-// Public License along with JODConverter.  If not, see
+// Public License along with Docwaza.  If not, see
 // <http://www.gnu.org/licenses/>.
 //
 package org.kyasuda.docwaza.office;
@@ -39,7 +39,7 @@ import java.net.ConnectException;
  * manually restarted.
  * <p>
  * This {@link OfficeManager} implementation basically provides the same
- * behaviour as JODConverter 2.x, including using <em>synchronized</em> blocks
+ * behaviour as Docwaza 2.x, including using <em>synchronized</em> blocks
  * for serialising office operations.
  */
 class ExternalOfficeManager implements OfficeManager {
