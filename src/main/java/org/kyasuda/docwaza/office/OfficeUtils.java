@@ -18,7 +18,7 @@
 // <http://www.gnu.org/licenses/>.
 //
 // Contributors:
-//     Laurent Doguin (Nuxeo), Julien Carsique (Nuxeo)
+//     Yasuda Keisuke (kyasuda)
 package org.kyasuda.docwaza.office;
 
 import java.io.File;
