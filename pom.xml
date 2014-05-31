@@ -5,12 +5,12 @@
 
   <groupId>org.kyasuda.docwaza</groupId>
   <artifactId>docwaza-core</artifactId>
-  <version>1.1-DOCWAZA-SNAPSHOT</version>
+  <version>1.1</version>
   <packaging>jar</packaging>
 
   <name>Docwaza - Core Library</name>
   <description>
-    docwaza converts office documents using OpenOffice.org.
+    Docwaza converts office documents using OpenOffice.org.
     kyasuda maintenance branch forked from the jodconverter, 
     by mirkonasato.
   </description>
