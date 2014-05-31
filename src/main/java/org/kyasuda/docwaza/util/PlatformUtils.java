@@ -18,7 +18,7 @@
 // <http://www.gnu.org/licenses/>.
 //
 // Contributors:
-//     Yasuda Keisuke (kyasuda)
+//     Yasuda Keisuke (kyasuda), Chia Chang (chiayear2003)
 package org.kyasuda.docwaza.util;
 
 import java.io.File;
