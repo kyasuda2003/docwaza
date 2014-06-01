@@ -7,4 +7,4 @@ This's a repo in the effort to keep and maintain the jodconverter (by mirkonasat
 
 I maintain/write the test class in the effort to supporting the openoffice 4.x which's of personal interests. it's passed my test. You're welcomed to use it at your own risk.
 
-I'll answer any questions on a daily basis.
+You're much welcomed to create an issue as I tend to work swiftly to resolve it. I'll answer any questions on a daily basis.
