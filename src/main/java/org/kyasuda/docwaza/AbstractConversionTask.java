@@ -45,7 +45,7 @@ import com.sun.star.util.XRefreshable;
  * Added an overridable method to handle processing of the document before it
  * get's converted
  * 
- * @author <a href="mailto:tdelprat@nuxeo.com">Tiry</a>
+ * @author <a href="mailto:tkyausda2003@gmail.com">Tiry</a>
  * 
  */
 public abstract class AbstractConversionTask implements OfficeTask {

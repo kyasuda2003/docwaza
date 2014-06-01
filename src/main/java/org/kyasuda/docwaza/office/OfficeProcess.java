@@ -267,7 +267,7 @@ class OfficeProcess {
     }
 
     private File getInstanceProfileDir(UnoUrl unoUrl) {
-        String dirName = ".jodconverter_"
+        String dirName = ".docwaza_"
                 + unoUrl.getAcceptString().replace(',', '_').replace('=', '-');
         dirName = dirName + "_" + Thread.currentThread().getId();
         return new File(System.getProperty("java.io.tmpdir"), dirName);
@@ -304,7 +304,7 @@ class OfficeProcess {
         if (PlatformUtils.isWindows()) {
             return null;
         }
-        String dirName = ".jodconverter_bundlesdir";
+        String dirName = ".docwaza_bundlesdir";
         dirName = dirName + "_" + Thread.currentThread().getId();
         return new File(System.getProperty("java.io.tmpdir"), dirName);
     }
