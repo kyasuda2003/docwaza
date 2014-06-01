@@ -84,7 +84,7 @@ class OfficeConnection implements OfficeContext {
             XConnector connector = OfficeUtils.cast(XConnector.class, localServiceManager.createInstanceWithContext("com.sun.star.connection.Connector", localContext));
             XConnection connection = connector.connect(unoUrl.getConnectString());
             XBridgeFactory bridgeFactory = OfficeUtils.cast(XBridgeFactory.class, localServiceManager.createInstanceWithContext("com.sun.star.bridge.BridgeFactory", localContext));
-            String bridgeName = "jodconverter_" + bridgeIndex.getAndIncrement();
+            String bridgeName = "docwaza_" + bridgeIndex.getAndIncrement();
             XBridge bridge = bridgeFactory.createBridge(bridgeName, "urp", connection, null);
             bridgeComponent = OfficeUtils.cast(XComponent.class, bridge);
             bridgeComponent.addEventListener(bridgeListener);

@@ -79,7 +79,7 @@ public class Convert {
 
         String[] fileNames = commandLine.getArgs();
         if ((outputFormat == null && fileNames.length != 2) || fileNames.length < 1) {
-            String syntax = "java net.sf.jodconverter.cli.Convert [options] input-file output-file; or\n"
+            String syntax = "java net.sf.docwaza.cli.Convert [options] input-file output-file; or\n"
                     + "[options] -f output-format input-file [input-file...]";
             HelpFormatter helpFormatter = new HelpFormatter();
             helpFormatter.printHelp(syntax, OPTIONS);
