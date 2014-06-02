@@ -1,7 +1,5 @@
 //
 // Docwaza - Java OpenDocument Converter
-// Copyright 2009 Art of Solving Ltd
-// Copyright 2004-2009 Mirko Nasato
 //
 // Docwaza is free software: you can redistribute it and/or
 // modify it under the terms of the GNU Lesser General Public License
