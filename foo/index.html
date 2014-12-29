@@ -1,0 +1,56 @@
+<link rel="import" href="../core-icons/core-icons.html">
+<link rel="import" href="../core-icons/av-icons.html">
+<link rel="import" href="../paper-fab/paper-fab.html">
+
+<polymer-element name="my-element">
+
+  <template>
+    <style>
+      #section {
+        box-sizing: border-box;
+        width: 420px;
+        height: 582px;
+        left: 90px;
+        top: -30px;
+        position: absolute;
+      }
+      #div {
+        box-sizing: border-box;
+        position: relative;
+        height: 80px;
+        padding: 24px;
+        color: rgb(255, 255, 255);
+        font-size: 32px;
+        background-color: rgb(255, 235, 59);
+      }
+      #div2 {
+        position: absolute;
+        color: rgb(255, 255, 255);
+        bottom: 50px;
+        right: 24px;
+      }
+      #paper_fab {
+        overflow: visible;
+        background-color: rgb(255, 64, 129);
+      }
+    </style>
+  </template>
+
+  <script>
+
+    Polymer({
+
+    });
+
+  </script>
+
+</polymer-element><section id="section" layout vertical>
+  <div id="div" class="bottom" hero hero-id="bottom">
+    <span id="span">General Knowledge</span>
+  </div>
+  <div id="div1" hero class="dummy"></div>
+  <div id="div2" class="fab fab-0">
+    <paper-fab icon="av:play-arrow" id="paper_fab" cross-fade-delayed></paper-fab>
+  </div>
+</section>
+

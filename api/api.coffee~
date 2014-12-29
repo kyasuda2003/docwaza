@@ -1,0 +1,83 @@
+inj=require "./../schema/schema-injection.js"
+tools=require "./../lib/tools.js"
+fs=require "fs"
+path=require "path"
+imgPath=path.resolve __dirname,
+		     "..",
+		     "./dos/img/fullsize"
+
+exports.addProd=(req, res)->
+  prod=new inj.Product name: req.body.name
+	       	       code: req.body.code
+	       	       sizes: req.body.sizes
+	       	       desc: req.body.desc
+
+  prod.save (err,_prod)->
+    if err? then res.send err else res.send _prod
+    return
+  return
+
+exports.updateProd=(req,res)->
+  inj.Product.findById req.body.id,(err,prod)->
+    _body=req.body
+    for action in _body.actions
+      prod.name=_body.name if action is "name"
+      prod.code=_body.code if action is "code"
+      prod.sizes=_body.sizes if action is "sizes"
+      prod.desc=_body.desc if action is "desc"
+      prod.images=_body.images if action is "images"
+      
+    prod.save (err)->
+      res.send if err? then err else [product: prod]
+      return
+    return
+  return
+
+exports.getProd=(req,res)->
+  inj.Product.findById req.param.id,(err,prod)->
+    res.json product:prod
+    return
+  return
+
+exports.getProdList=(req,res)->
+  inj.Product.find (err,prods)->
+    res.send if err? then err else prods
+    return
+  return
+
+exports.deleteProd=(req,res)->
+  inj.Product.findById req.params.id,(err,prod)->
+    @req=req
+    @res=res
+    for img in prod.images
+      fs.unlink "#{imgPath}/#{img.fileName}",(err)->
+        if err? then throw err else console.log "Successfully deleted the file #{img.originalFileName}"
+	  
+    	
+    prod.remove (err)=>
+      @res.send if err? then err else status:"ok",productName:prod.name
+      
+    return
+   
+  return
+
+
+exports.addImage (req,res)->  
+  fs.readFile req.files.image.path,(err,data)->
+    @req=req
+    @res=res
+    if !req.files.image.name?
+      console.log "There was an error"
+      @res.redirect "/"
+      @res.end
+    else
+      imgId=tools.generateGUID
+      op=imgId
+      fs.writeFile "#{imgPath}/#{op}",(err)=>
+        @res.send if err? then err else status:"ok",id:imgId,originalFileName:@req.files.image.name,type:@req.files.image.type
+	return 
+   
+    return
+  return
+
+exports.
